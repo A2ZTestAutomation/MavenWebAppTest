@@ -27,8 +27,8 @@ public class HomePageTest {
   @BeforeMethod
   public void beforeTest() {
 	  driver = new HtmlUnitDriver();
-	  driver.get("http://localhost:9090/MavenWebAppOne/");
-//	  driver.get("https://www.google.com/");
+//	  driver.get("http://localhost:9090/MavenWebAppOne/");
+	  driver.get("https://www.google.com/");
 	  driver.manage().window().maximize();
 	 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	 
@@ -38,8 +38,8 @@ public class HomePageTest {
   public void test01_titleTest() {
 	  String pageTitle = driver.getTitle();
 	  System.out.println("Title of this page is .........." +pageTitle);
-	  Assert.assertEquals(pageTitle, "Maven Sample WebApp");
-//	  Assert.assertEquals(pageTitle, "Google");
+//	  Assert.assertEquals(pageTitle, "Maven Sample WebApp");
+	  Assert.assertEquals(pageTitle, "Google");
 	 
   }
 }
